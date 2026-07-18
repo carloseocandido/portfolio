@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --background: 248 249 250;
+  --foreground: 18 24 38;
+  --card: 255 255 255;
+  --card-foreground: 18 24 38;
+  --muted: 229 231 235;
+  --muted-foreground: 75 85 99;
+  --border: 212 217 225;
+  --input: 212 217 225;
+  --primary: 37 99 235;
+  --primary-foreground: 255 255 255;
+  --secondary: 15 23 42;
+  --secondary-foreground: 255 255 255;
+  --accent: 14 165 233;
+  --accent-foreground: 255 255 255;
+  --ring: 37 99 235;
+  --shadow-glass: 0 20px 45px -20px rgb(15 23 42 / 0.24);
+}
+
+:root[data-theme="dark"] {
+  --background: 7 10 19;
+  --foreground: 241 245 249;
+  --card: 13 18 31;
+  --card-foreground: 241 245 249;
+  --muted: 20 27 44;
+  --muted-foreground: 148 163 184;
+  --border: 31 41 55;
+  --input: 31 41 55;
+  --primary: 173 198 255;
+  --primary-foreground: 8 15 35;
+  --secondary: 226 232 240;
+  --secondary-foreground: 8 15 35;
+  --accent: 56 189 248;
+  --accent-foreground: 8 15 35;
+  --ring: 173 198 255;
+  --shadow-glass: 0 25px 60px -24px rgb(2 6 23 / 0.72);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: 7 10 19;
+    --foreground: 241 245 249;
+    --card: 13 18 31;
+    --card-foreground: 241 245 249;
+    --muted: 20 27 44;
+    --muted-foreground: 148 163 184;
+    --border: 31 41 55;
+    --input: 31 41 55;
+    --primary: 173 198 255;
+    --primary-foreground: 8 15 35;
+    --secondary: 226 232 240;
+    --secondary-foreground: 8 15 35;
+    --accent: 56 189 248;
+    --accent-foreground: 8 15 35;
+    --ring: 173 198 255;
+    --shadow-glass: 0 25px 60px -24px rgb(2 6 23 / 0.72);
+  }
+}
+
+@theme {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-ring: rgb(var(--ring));
+  --font-body: "Inter", "system-ui", sans-serif;
+  --font-display: "Inter", "system-ui", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: rgb(var(--primary) / 0.18);
+  color: rgb(var(--foreground));
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--ring));
+  outline-offset: 2px;
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-border/70 bg-card/75 backdrop-blur-xl;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .section-shell {
+    @apply py-20 sm:py-24;
+  }
+
+  .section-kicker {
+    @apply font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl;
+  }
+
+  .section-description {
+    @apply max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

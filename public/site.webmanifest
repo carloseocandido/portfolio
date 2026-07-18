@@ -1,0 +1,17 @@
+{
+  "name": "Carlos | Backend Developer",
+  "short_name": "Carlos",
+  "description": "Portfólio de Backend Developer focado em Node.js, TypeScript, APIs escaláveis e qualidade de software.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
