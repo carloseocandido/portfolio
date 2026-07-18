@@ -5,7 +5,6 @@ import type {
   NavigationItem,
   ProjectItem,
   SocialLink,
-  StatItem,
   TechCategory,
 } from "../types/portfolio";
 import bloomLogo from "../assets/logos/thebloom_group_logo.jpeg";
