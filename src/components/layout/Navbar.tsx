@@ -46,7 +46,9 @@ export function Navbar() {
         />
 
         <div className="flex items-center gap-2">
-          <HeaderActions />
+          <div className="hidden lg:block">
+            <HeaderActions />
+          </div>
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/70 bg-card/70 text-foreground transition-colors hover:bg-muted/80 lg:hidden"
@@ -75,6 +77,12 @@ export function Navbar() {
             onNavigate={() => setIsOpen(false)}
             mobile
           />
+
+          <div className="mt-4 border-t border-border/60 pt-4">
+            <div className="flex justify-center">
+              <HeaderActions />
+            </div>
+          </div>
         </Container>
       </div>
     </header>
