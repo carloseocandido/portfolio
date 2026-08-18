@@ -14,7 +14,7 @@ export const siteContent = {
   name: "Carlos",
   roles: ["Backend Developer", "Node.js Developer"],
   headline:
-    "Desenvolvimento backend com foco em APIs, regras de negócio e arquiteturas escaláveis.",
+    "Construo APIs e sistemas backend orientados a regras de negócio, com foco em qualidade, manutenção e performance.",
   summary:
     "Sou Desenvolvedor Backend especializado em Node.js e TypeScript, com atuação voltada à construção de APIs REST, modelagem de regras de negócio e desenvolvimento de aplicações robustas, performáticas e de fácil manutenção.",
   ctaLabel:
@@ -74,63 +74,65 @@ export const techCategories: TechCategory[] = [
   {
     title: "Backend",
     description:
-      "Tecnologias centrais do meu trabalho atual, com foco em APIs e serviços backend.",
+      "Tecnologias que utilizo para construir APIs, serviços e regras de negócio.",
     items: [
       { name: "Node.js" },
       { name: "TypeScript" },
-      { name: "Fastify" },
       { name: "Express" },
+      { name: "Fastify" },
     ],
   },
   {
-    title: "Database",
+    title: "Databases",
     description:
-      "Camadas de persistência e modelagem de dados para aplicações consistentes.",
+      "Experiência com bancos relacionais, modelagem de dados e consultas SQL.",
     items: [
       { name: "PostgreSQL" },
       { name: "MySQL" },
-      { name: "Drizzle ORM" },
+      { name: "SQL Server" },
       { name: "SQL" },
     ],
   },
   {
+    title: "Data Access",
+    description:
+      "Diferentes abordagens para persistência e acesso tipado aos dados.",
+    items: [{ name: "Drizzle ORM" }, { name: "Knex" }, { name: "Sequelize" }],
+  },
+  {
     title: "Testing",
     description:
-      "Práticas que reforçam confiabilidade, regressão controlada e evolução segura.",
+      "Experiência em testes automatizados e garantia de qualidade de software.",
     items: [
-      { name: "Selenium" },
-      { name: "Python" },
-      { name: "Jest" },
       { name: "Vitest" },
+      { name: "Jest" },
       { name: "pytest" },
+      { name: "Selenium" },
       { name: "E2E" },
     ],
   },
   {
     title: "Architecture",
     description:
-      "Princípios que orientam decisões técnicas com baixo acoplamento e manutenção previsível.",
-    items: [{ name: "Clean Architecture" }, { name: "DDD" }, { name: "SOLID" }],
-  },
-  {
-    title: "DevOps",
-    description:
-      "Ferramentas que apoiam entrega, padronização e ambiente de execução.",
+      "Princípios utilizados para manter código organizado, testável e com baixo acoplamento.",
     items: [
-      { name: "Docker" },
-      { name: "CI/CD" },
-      { name: "Git" },
-      { name: "GitHub Actions" },
+      { name: "Clean Architecture" },
+      { name: "DDD" },
+      { name: "SOLID" },
+      { name: "Repository Pattern" },
+      { name: "Dependency Injection" },
     ],
   },
   {
-    title: "Tools",
-    description: "Ferramentas de apoio para desenvolvimento e produtividade.",
+    title: "Infrastructure",
+    description:
+      "Ferramentas utilizadas para desenvolvimento, execução e entrega de aplicações.",
     items: [
-      { name: "Postman" },
-      { name: "Linux" },
-      { name: "VS Code" },
-      { name: "Cursor (IA com MCPs integrados)" },
+      { name: "Docker" },
+      { name: "Git" },
+      { name: "GitHub Actions" },
+      { name: "Redis" },
+      { name: "CI/CD" },
     ],
   },
 ];
@@ -239,53 +241,29 @@ export const projectItems: ProjectItem[] = [
 ];
 export const architectureTopics: ArchitectureTopic[] = [
   {
-    title: "Clean Architecture",
-    summary:
-      "Base para manter domínio isolado da infraestrutura e das decisões de framework.",
-  },
-  {
-    title: "DDD",
-    summary:
-      "Aplicado quando ajuda a modelar regras de negócio com linguagem consistente.",
-  },
-  {
-    title: "Repository Pattern",
-    summary:
-      "Separação entre persistência e regra de negócio para reduzir acoplamento.",
-  },
-  {
-    title: "Use Cases",
-    summary:
-      "Organização da lógica de aplicação em unidades pequenas e testáveis.",
-  },
-  {
-    title: "Dependency Injection",
-    summary:
-      "Composição que facilita teste, manutenção e troca de implementações.",
-  },
-  {
     title: "REST APIs",
     summary:
-      "Construção de contratos claros para consumo previsível de serviços.",
+      "Contratos HTTP claros, validação de entrada e responsabilidades bem definidas entre as camadas.",
   },
   {
     title: "Validação",
-    summary: "Proteção da entrada antes de atingir domínio e persistência.",
+    summary:
+      "Dados externos são validados antes de alcançar as regras de negócio e a persistência.",
   },
   {
     title: "Autenticação",
     summary:
-      "Proteção de acesso com foco em segurança e clareza de implementação.",
-  },
-  {
-    title: "ORM",
-    summary:
-      "Produtividade com tipagem, rastreabilidade e migrações controladas.",
+      "Controle de acesso tratado como parte da aplicação, mantendo segurança e responsabilidades bem definidas.",
   },
   {
     title: "Testes",
     summary:
-      "Feedback rápido para manter estabilidade e confiança na evolução.",
+      "Casos de uso e regras de negócio são estruturados para permitir testes rápidos e independentes de infraestrutura.",
+  },
+  {
+    title: "Persistência",
+    summary:
+      "Acesso a dados isolado das regras de negócio, permitindo trabalhar com diferentes estratégias de persistência.",
   },
 ];
 

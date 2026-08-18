@@ -34,7 +34,7 @@ export function HeroSection() {
 
               <div className="inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
                 <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_18px_rgb(var(--primary)/0.55)]" />
-                system online
+                Backend Developer · Node.js · TypeScript
               </div>
 
               <div className="space-y-4">
@@ -43,7 +43,9 @@ export function HeroSection() {
                 </p>
                 <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
                   {siteContent.name}
-                  <span className="block text-primary">Backend Developer</span>
+                  <span className="block text-primary">
+                    Desenvolvedor Backend
+                  </span>
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
                   {siteContent.headline}
@@ -55,21 +57,14 @@ export function HeroSection() {
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href={heroLinks.github} external>
+                <Button href="#projects">Ver projetos</Button>
+
+                <Button href={heroLinks.github} variant="secondary" external>
                   GitHub
                 </Button>
-                <Button href={heroLinks.linkedin} variant="secondary" external>
-                  LinkedIn
-                </Button>
-                {/* <Button
-                  href={heroLinks.resume}
-                  variant="ghost"
-                  download="Carlos-CV.txt"
-                >
-                  Download CV
-                </Button> */}
-                <Button href="#contact" variant="secondary">
-                  Contato
+
+                <Button href="#contact" variant="ghost">
+                  Entrar em contato
                 </Button>
               </div>
 
@@ -78,10 +73,6 @@ export function HeroSection() {
                   <Badge key={link.label}>{link.label}</Badge>
                 ))}
               </div>
-
-              <p className="max-w-2xl text-sm leading-7 text-muted-foreground">
-                {siteContent.ctaLabel}
-              </p>
             </div>
           </AnimatedSection>
 
@@ -92,10 +83,11 @@ export function HeroSection() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                      focus
+                      engenharia
                     </p>
+
                     <h2 className="mt-2 text-2xl font-semibold text-foreground">
-                      Arquitetura pronta para escala
+                      Backend pensado para evoluir
                     </h2>
                   </div>
                   <span className="material-symbols-outlined text-3xl text-primary">
@@ -106,20 +98,21 @@ export function HeroSection() {
                 <div className="grid gap-3">
                   <div className="rounded-2xl border border-border/70 bg-background/60 p-4">
                     <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                      Pilares
+                      Stack
                     </p>
                     <p className="mt-2 text-sm leading-7 text-foreground/90">
-                      Node.js, TypeScript, APIs REST, arquitetura limpa, testes
-                      automatizados e banco relacional.
+                      Node.js, TypeScript, Express, Fastify, MySQL e PostgreSQL,
+                      trabalhando com diferentes abordagens de persistência.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-border/70 bg-background/60 p-4">
                     <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                      Compromisso
+                      Diferencial
                     </p>
                     <p className="mt-2 text-sm leading-7 text-foreground/90">
-                      Entregar software previsível, com contrato claro, baixo
-                      acoplamento e manutenção simples.
+                      Experiência em desenvolvimento e QA, trazendo preocupação
+                      com testabilidade, confiabilidade e qualidade desde a
+                      implementação.
                     </p>
                   </div>
                 </div>
