@@ -57,17 +57,20 @@ export const heroLinks = {
 } as const;
 
 export const aboutParagraphs = [
-  "Atualmente meu foco é o desenvolvimento Backend, com Node.js e TypeScript como base para criação de APIs, regras de negócio e serviços preparados para crescimento.",
-  "Valorizo código limpo, boas práticas, testes automatizados e arquiteturas bem definidas, especialmente com Clean Architecture e DDD quando fazem sentido para o domínio.",
-  "A minha trajetória começou em Help Desk, passou por estágio com Delphi, SQL Server e Firebird, seguiu por QA Automation com Python e Selenium e hoje está consolidada em Backend.",
-  "Essa evolução me deu uma visão mais completa de produto, suporte, qualidade e engenharia, o que ajuda nas decisões técnicas do dia a dia.",
+  "Atualmente trabalho como Backend Developer, utilizando principalmente Node.js e TypeScript para construir APIs, regras de negócio, integrações e serviços orientados a dados.",
+
+  "Gosto de entender o problema antes de escolher a tecnologia. No desenvolvimento, busco manter as responsabilidades bem definidas e criar soluções que continuem fáceis de entender e modificar conforme o sistema cresce.",
+
+  "Minha trajetória passou por suporte, desenvolvimento com Delphi e bancos relacionais, QA Automation com Python e Selenium e, posteriormente, desenvolvimento backend. Cada etapa contribuiu para a forma como hoje analiso problemas e tomo decisões técnicas.",
+
+  "A experiência em QA é especialmente importante na minha forma de desenvolver: penso em testabilidade, regressões e confiabilidade não apenas depois que o código está pronto, mas durante a própria implementação.",
 ] as const;
 
 export const aboutHighlights = [
   "Node.js e TypeScript",
   "APIs REST e regras de negócio",
-  "Clean Architecture e DDD",
-  "Testes automatizados e qualidade de código",
+  "Arquitetura e baixo acoplamento",
+  "Testabilidade e qualidade",
 ] as const;
 
 export const techCategories: TechCategory[] = [
