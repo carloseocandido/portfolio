@@ -126,7 +126,12 @@ export const techCategories: TechCategory[] = [
   {
     title: "Tools",
     description: "Ferramentas de apoio para desenvolvimento e produtividade.",
-    items: [{ name: "Postman" }, { name: "Linux" }, { name: "VS Code" }],
+    items: [
+      { name: "Postman" },
+      { name: "Linux" },
+      { name: "VS Code" },
+      { name: "Cursor (IA com MCPs integrados)" },
+    ],
   },
 ];
 
@@ -136,30 +141,30 @@ export const experienceItems: ExperienceItem[] = [
     company: "Bloom",
     period: "out de 2024 - o momento",
     summary:
-      "Evolução dentro da Bloom começando em QA e seguindo para desenvolvimento backend. O foco atual está na construção de APIs escaláveis, arquitetura limpa, regras de negócio, integrações e modelagem de banco de dados.",
-    highlights: ["TypeScript", "Node.js", "Fastify", "Express", "PostgreSQL"],
+      "Minha trajetória na Bloom começou em QA Automation e evoluiu para desenvolvimento backend. Atualmente atuo na construção e evolução de APIs, regras de negócio, integrações e persistência de dados, com foco em qualidade, manutenção e performance.",
+    highlights: [
+      "Node.js",
+      "TypeScript",
+      "APIs REST",
+      "Banco de dados",
+      "Testes",
+      "Arquitetura",
+    ],
     tone: "primary",
     timeline: [
       {
         title: "Software Quality Assurance Tester",
         period: "out de 2024 - mar de 2025 · 6 meses",
         summary:
-          "Garantia da qualidade de software por meio de testes funcionais e automatizados. Uso de Selenium e pytest para validar fluxos críticos, documentar casos de teste e manter rastreabilidade.",
-        highlights: ["Selenium", "pytest", "Testes automatizados"],
+          "Atuação com testes funcionais e automação de cenários críticos, utilizando Python, Selenium e pytest. Experiência com identificação de regressões, validação de fluxos e criação de automações para aumentar a confiabilidade das entregas.",
+        highlights: ["Python", "Selenium", "pytest", "QA Automation"],
       },
       {
         title: "Software Developer",
         period: "mar de 2025 - o momento",
         summary:
-          "Desenvolvimento backend com foco em APIs escaláveis, arquitetura limpa, regras de negócio, integrações e modelagem de banco de dados. Trabalho com TypeScript, Node.js, Fastify, Express, MySQL, PostgreSQL e boas práticas para soluções robustas e de fácil manutenção.",
-        highlights: [
-          "TypeScript",
-          "Node.js",
-          "Fastify",
-          "Express",
-          "PostgreSQL",
-          "APIs escaláveis",
-        ],
+          "Desenvolvimento backend com Node.js e TypeScript, atuando na implementação de APIs, regras de negócio, integrações e persistência de dados. Experiência com diferentes arquiteturas e tecnologias de backend, incluindo Express, MySQL, Knex, Sequelize.",
+        highlights: ["TypeScript", "Node.js", "TypeScript", "Express", "MySQL"],
       },
     ],
     logoSrc: bloomLogo,
@@ -170,8 +175,16 @@ export const experienceItems: ExperienceItem[] = [
     company: "Desoft7",
     period: "out de 2023 - out de 2024 · 1 ano 1 mês",
     summary:
-      "Desenvolvedor com experiência em SQL Server e práticas ágeis (Scrum e Kanban). Atuando na correção, aprimoramento e otimização de software, tenho experiência na integração de web services e APIs (SOAP e JSON). Busco sempre implementando soluções eficientes e de alta qualidade.",
-    highlights: ["SQL Server", "SOAP", "JSON", "Scrum", "Kanban"],
+      "Atuação no desenvolvimento e manutenção de sistemas, com foco na correção de problemas, implementação de melhorias e otimização de soluções existentes. Experiência com SQL Server e integração com serviços externos por meio de APIs e web services.",
+    highlights: [
+      "Delphi",
+      "SQL Server",
+      "SOAP",
+      "JSON",
+      "APIs",
+      "Scrum",
+      "Kanban",
+    ],
     tone: "neutral",
     logoSrc: desoftLogo,
     logoAlt: "Desoft7",
@@ -197,14 +210,21 @@ export const projectItems: ProjectItem[] = [
     ],
   },
   {
-    title: "Farol Mistico",
+    title: "Farol",
     summary:
-      "Aplicação com fluxo de créditos e pagamentos integrada ao Asaas, com sincronização de saldo e processamento de webhooks.",
+      "Aplicação backend com integração a pagamentos e gerenciamento de créditos, envolvendo comunicação com serviços externos e sincronização de estado.",
     challenge:
-      "Garantir que pagamentos e alterações de saldo permanecessem consistentes mesmo quando a confirmação dependesse de webhooks ou verificações posteriores.",
+      "Garantir consistência no processamento de pagamentos e atualização de créditos mesmo diante de confirmações assíncronas.",
     solution:
-      "Implementação de fluxo de reconciliação entre frontend e backend, tratamento de webhooks, fallback de confirmação e atualização do saldo em tempo real.",
-    stack: ["JavaScript", "Node.js", "Asaas", "Webhooks", "Socket", "Jest"],
+      "Implementação de integração com API externa, processamento de webhooks e mecanismos de reconciliação para manter o estado dos pagamentos e créditos consistente.",
+    stack: [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Sequelize",
+      "Webhooks",
+    ],
   },
   {
     title: "Sistema de estoque e CMV",
@@ -213,20 +233,10 @@ export const projectItems: ProjectItem[] = [
     challenge:
       "Modelar regras de negócio envolvendo produtos, unidades, transformações, armazenamento, fichas técnicas e histórico sem comprometer a consistência dos dados.",
     solution:
-      "Modelagem relacional, repositories, casos de uso e consultas SQL otimizadas para lidar com regras complexas e grandes volumes de dados.",
-    stack: [
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "MySQL",
-      "Knex",
-      "SQL",
-      "Docker",
-      "Jest",
-    ],
+      "Implementação de regras de negócio, repositories e consultas SQL utilizando Knex, com foco em consistência dos dados e desempenho das operações.",
+    stack: ["TypeScript", "Node.js", "Express", "MySQL", "Knex", "SQL"],
   },
 ];
-
 export const architectureTopics: ArchitectureTopic[] = [
   {
     title: "Clean Architecture",

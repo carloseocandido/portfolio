@@ -8,8 +8,8 @@ export function ExperienceSection() {
     <Section
       id="experience"
       eyebrow="Experiência"
-      title="Trajetória construída por camadas: suporte, sistemas legados, QA e backend."
-      description="Cada etapa contribuiu para a base técnica atual, com foco em resolução de problemas, qualidade e construção de software sólido."
+      title="Da qualidade ao backend: uma trajetória construída na prática."
+      description="Minha experiência em suporte, desenvolvimento e QA influenciou diretamente a forma como hoje construo e mantenho sistemas backend."
     >
       <Timeline>
         {experienceItems.map((item) => (
