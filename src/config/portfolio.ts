@@ -197,7 +197,7 @@ export const projectItems: ProjectItem[] = [
     ],
   },
   {
-    title: "Farol",
+    title: "Farol Mistico",
     summary:
       "Aplicação com fluxo de créditos e pagamentos integrada ao Asaas, com sincronização de saldo e processamento de webhooks.",
     challenge:
@@ -221,8 +221,8 @@ export const projectItems: ProjectItem[] = [
       "MySQL",
       "Knex",
       "SQL",
-      "React",
-      "Vite",
+      "Docker",
+      "Jest",
     ],
   },
 ];
