@@ -14,7 +14,7 @@ export const siteContent = {
   headline:
     "I build APIs and backend systems driven by business rules, focused on quality, maintainability, and performance.",
   summary:
-    "I am a Backend Developer specialized in Node.js and TypeScript, focused on building REST APIs, modeling business rules, and developing robust, performant, and maintainable applications.",
+    "I mainly work with Node.js and TypeScript, developing REST APIs, integrations, business rules, and data-oriented solutions. My previous experience in QA Automation also influences how I think about testing, reliability, and software maintenance.",
   ctaLabel:
     "Focused on software architecture, code quality, and scalable systems.",
 } as const;
@@ -126,7 +126,7 @@ export const experienceItems: ExperienceItem[] = [
         title: "Software Developer",
         period: "Mar 2025 - present",
         summary:
-          "Backend development with Node.js and TypeScript, working on APIs, business rules, integrations, and data persistence. Experience with different backend architectures and technologies, including Express, MySQL, Knex, and Sequelize.",
+          "Backend development with Node.js and TypeScript, working on APIs, business rules, integrations, and data persistence. Experience with different backend architectures and technologies, including Express, MySQL, Knex, and Sequelize",
         highlights: ["TypeScript", "Node.js", "Express", "MySQL"],
       },
     ],

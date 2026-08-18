@@ -16,7 +16,7 @@ export const siteContent = {
   headline:
     "Construo APIs e sistemas backend orientados a regras de negócio, com foco em qualidade, manutenção e performance.",
   summary:
-    "Sou Desenvolvedor Backend especializado em Node.js e TypeScript, com atuação voltada à construção de APIs REST, modelagem de regras de negócio e desenvolvimento de aplicações robustas, performáticas e de fácil manutenção.",
+    "Trabalho principalmente com Node.js e TypeScript, desenvolvendo APIs REST, integrações, regras de negócio e soluções orientadas a dados. Minha experiência anterior em QA Automation também influencia minha forma de pensar em testes, confiabilidade e manutenção do software.",
   ctaLabel:
     "Foco em arquitetura de software, qualidade de código e sistemas escaláveis.",
 } as const;
@@ -168,15 +168,15 @@ export const experienceItems: ExperienceItem[] = [
         title: "Software Developer",
         period: "mar de 2025 - o momento",
         summary:
-          "Desenvolvimento backend com Node.js e TypeScript, atuando na implementação de APIs, regras de negócio, integrações e persistência de dados. Experiência com diferentes arquiteturas e tecnologias de backend, incluindo Express, MySQL, Knex, Sequelize.",
+          "Desenvolvimento backend com Node.js e TypeScript, atuando na implementação de APIs, regras de negócio, integrações e persistência de dados. Experiência com diferentes arquiteturas e tecnologias de backend, incluindo Express, Fastify, MySQL, PostgreSQL, Knex, Sequelize e Drizzle ORM.",
         highlights: [
           "TypeScript",
-          "Express",
           "Node.js",
+          "Express",
+          "Fastify",
           "MySQL",
-          "Knex",
-          "Sequelize",
-          "MongoDB",
+          "PostgreSQL",
+          "Drizzle ORM",
         ],
       },
     ],

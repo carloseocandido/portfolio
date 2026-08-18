@@ -43,9 +43,6 @@ export function HeroSection() {
               </div>
 
               <div className="space-y-4">
-                <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                  {siteContent.roles.join(" • ")}
-                </p>
                 <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
                   {siteContent.name}
                   <span className="block text-primary">
