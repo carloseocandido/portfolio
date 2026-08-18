@@ -169,7 +169,15 @@ export const experienceItems: ExperienceItem[] = [
         period: "mar de 2025 - o momento",
         summary:
           "Desenvolvimento backend com Node.js e TypeScript, atuando na implementação de APIs, regras de negócio, integrações e persistência de dados. Experiência com diferentes arquiteturas e tecnologias de backend, incluindo Express, MySQL, Knex, Sequelize.",
-        highlights: ["TypeScript", "Node.js", "TypeScript", "Express", "MySQL"],
+        highlights: [
+          "TypeScript",
+          "Express",
+          "Node.js",
+          "MySQL",
+          "Knex",
+          "Sequelize",
+          "MongoDB",
+        ],
       },
     ],
     logoSrc: bloomLogo,
