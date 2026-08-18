@@ -1,6 +1,11 @@
 const en = {
   translation: {
     language: "Language",
+    languageNames: {
+      ptBR: "Portuguese (Brazil)",
+      en: "English",
+      es: "Spanish",
+    },
     scrollToTop: "Back to top",
     settings: "Settings",
     appearance: "Appearance",

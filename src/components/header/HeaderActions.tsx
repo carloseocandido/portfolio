@@ -11,6 +11,7 @@ export function HeaderActions({ mobile = false }: HeaderActionsProps) {
   const { t } = useTranslation();
   const { resolvedTheme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const settingsRef = useRef<HTMLDivElement>(null);
 
   const changeLanguage = (language: "pt-BR" | "en" | "es") => {
@@ -97,21 +98,63 @@ export function HeaderActions({ mobile = false }: HeaderActionsProps) {
             </div>
 
             <div className="border-t border-border/70 pt-4">
-              <p className="mb-2 text-sm font-medium text-foreground">
+              <p className="text-sm font-medium text-foreground">
                 {t("language")}
               </p>
-              <div className="grid grid-cols-2 gap-2">
-                {(["pt-BR", "en", "es"] as const).map((language) => (
-                  <button
-                    key={language}
-                    type="button"
-                    onClick={() => changeLanguage(language)}
-                    className={`rounded-xl border px-3 py-2 text-sm font-semibold transition-colors ${i18n.resolvedLanguage === language ? "border-primary bg-primary/10 text-primary" : "border-border/70 text-muted-foreground hover:bg-muted/70 hover:text-foreground"}`}
-                    aria-pressed={i18n.resolvedLanguage === language}
+              <div className="relative mt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsLanguageOpen((current) => !current)}
+                  className="flex h-11 w-full items-center justify-between rounded-xl border border-border/70 bg-background/50 px-3 text-sm font-medium text-foreground transition-colors hover:border-primary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  aria-expanded={isLanguageOpen}
+                  aria-controls="language-options"
+                >
+                  <span className="flex items-center gap-2">
+                    <span
+                      className="font-mono text-xs font-semibold tracking-tight text-muted-foreground"
+                      aria-hidden="true"
+                    >
+                      文A
+                    </span>
+                    {t(
+                      `languageNames.${i18n.resolvedLanguage === "pt-BR" ? "ptBR" : i18n.resolvedLanguage}`,
+                    )}
+                  </span>
+                  <span
+                    className="text-xs text-muted-foreground"
+                    aria-hidden="true"
                   >
-                    {language === "pt-BR" ? "PT-BR" : language.toUpperCase()}
-                  </button>
-                ))}
+                    {isLanguageOpen ? "▲" : "▼"}
+                  </span>
+                </button>
+
+                {isLanguageOpen ? (
+                  <div
+                    id="language-options"
+                    className="absolute inset-x-0 top-[calc(100%+0.5rem)] z-10 rounded-xl border border-border/80 bg-card p-1.5 shadow-xl shadow-slate-950/15"
+                    role="listbox"
+                    aria-label={t("language")}
+                  >
+                    {(["pt-BR", "en", "es"] as const).map((language) => (
+                      <button
+                        key={language}
+                        type="button"
+                        onClick={() => {
+                          changeLanguage(language);
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors hover:bg-muted/70 ${i18n.resolvedLanguage === language ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
+                        role="option"
+                        aria-selected={i18n.resolvedLanguage === language}
+                      >
+                        {t(
+                          `languageNames.${language === "pt-BR" ? "ptBR" : language}`,
+                        )}
+                        {i18n.resolvedLanguage === language ? "✓" : null}
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>

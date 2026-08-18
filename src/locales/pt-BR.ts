@@ -1,6 +1,11 @@
 const ptBR = {
   translation: {
     language: "Idioma",
+    languageNames: {
+      ptBR: "Português (Brasil)",
+      en: "Inglês",
+      es: "Espanhol",
+    },
     scrollToTop: "Voltar ao topo",
     settings: "Configurações",
     appearance: "Aparência",
