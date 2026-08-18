@@ -1,6 +1,7 @@
 const en = {
   translation: {
     language: "Language",
+    scrollToTop: "Back to top",
     settings: "Settings",
     appearance: "Appearance",
     light: "Light",

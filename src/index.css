@@ -107,7 +107,7 @@ body {
   }
 
   .section-shell {
-    @apply py-20 sm:py-24;
+    @apply py-14 sm:py-16;
   }
 
   .section-kicker {

@@ -2,6 +2,7 @@ import { Header } from "./components/header/Header";
 import { Main } from "./components/main/Main";
 import { Footer } from "./components/layout/Footer";
 import { cn } from "./utils/cn";
+import { ScrollToTop } from "./components/ui/ScrollToTop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Main />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

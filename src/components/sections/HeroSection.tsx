@@ -13,9 +13,9 @@ export function HeroSection() {
   const { siteContent } = usePortfolio();
 
   return (
-    <section id="top" className="pt-10 sm:pt-14">
+    <section id="top" className="pt-4 sm:pt-8">
       <Container>
-        <div className="grid items-center gap-10 pb-10 pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:py-16">
+        <div className="grid items-center gap-10 pb-6 pt-6 lg:grid-cols-[1.15fr_0.85fr] lg:py-10">
           <AnimatedSection>
             <div className="max-w-3xl space-y-8">
               <div className="flex items-center gap-4">
