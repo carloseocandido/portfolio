@@ -13,7 +13,7 @@ export function HeaderActions({ mobile = false }: HeaderActionsProps) {
   const [isOpen, setIsOpen] = useState(false);
   const settingsRef = useRef<HTMLDivElement>(null);
 
-  const changeLanguage = (language: "pt-BR" | "en") => {
+  const changeLanguage = (language: "pt-BR" | "en" | "es") => {
     void i18n.changeLanguage(language);
     localStorage.setItem("portfolio-language", language);
   };
@@ -101,7 +101,7 @@ export function HeaderActions({ mobile = false }: HeaderActionsProps) {
                 {t("language")}
               </p>
               <div className="grid grid-cols-2 gap-2">
-                {(["pt-BR", "en"] as const).map((language) => (
+                {(["pt-BR", "en", "es"] as const).map((language) => (
                   <button
                     key={language}
                     type="button"
@@ -109,7 +109,7 @@ export function HeaderActions({ mobile = false }: HeaderActionsProps) {
                     className={`rounded-xl border px-3 py-2 text-sm font-semibold transition-colors ${i18n.resolvedLanguage === language ? "border-primary bg-primary/10 text-primary" : "border-border/70 text-muted-foreground hover:bg-muted/70 hover:text-foreground"}`}
                     aria-pressed={i18n.resolvedLanguage === language}
                   >
-                    {language === "pt-BR" ? "PT-BR" : "EN"}
+                    {language === "pt-BR" ? "PT-BR" : language.toUpperCase()}
                   </button>
                 ))}
               </div>
