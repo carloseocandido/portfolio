@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Carlos Candido — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal de **Carlos Candido**, Backend Developer especializado em **Node.js e TypeScript**.
 
-Currently, two official plugins are available:
+O projeto apresenta minha trajetória profissional, experiências, projetos e principais tecnologias utilizadas no desenvolvimento de aplicações backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Sobre
 
-## React Compiler
+Atualmente trabalho com desenvolvimento backend, principalmente utilizando Node.js e TypeScript.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Minha experiência inclui:
 
-## Expanding the ESLint configuration
+- Desenvolvimento de APIs REST
+- Regras de negócio
+- Arquitetura de software
+- Modelagem e persistência de dados
+- Integrações com serviços externos
+- Testes automatizados
+- Otimização de consultas e operações de banco de dados
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Minha trajetória profissional também inclui experiência com QA Automation, o que influencia diretamente minha preocupação com qualidade, testabilidade e prevenção de regressões.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologias
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js
+- TypeScript
+- Express
+- Fastify
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Databases
+
+- PostgreSQL
+- MySQL
+- SQL Server
+
+### ORMs / Query Builders
+
+- Drizzle ORM
+- Knex
+- Sequelize
+
+### Testing
+
+- Jest
+- Vitest
+- Python
+- Selenium
+- pytest
+
+### Infrastructure & Tools
+
+- Docker
+- Git
+- GitHub Actions
+
+## 📂 Projetos
+
+O portfólio apresenta alguns dos projetos e sistemas em que trabalhei, incluindo experiências com:
+
+- APIs Node.js
+- Arquiteturas backend
+- Sistemas de estoque e CMV
+- Integrações com serviços externos
+- Processamento de pagamentos e webhooks
+- PostgreSQL e MySQL
+
+## 🎨 Sobre este projeto
+
+Este portfólio foi desenvolvido utilizando:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+O projeto possui suporte a:
+
+- Tema claro e escuro
+- Layout responsivo
+- SEO básico
+- Open Graph
+- Navegação por seções
+- Componentes reutilizáveis
+
+## ▶️ Executando localmente
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/carloseocandido/portfolio.git
 ```
