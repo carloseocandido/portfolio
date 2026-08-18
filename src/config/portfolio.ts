@@ -180,44 +180,50 @@ export const experienceItems: ExperienceItem[] = [
 
 export const projectItems: ProjectItem[] = [
   {
-    title: "Backend de apoio a operações",
+    title: "Tag Royale",
     summary:
-      "Estrutura preparada para registrar integração entre regras de negócio, persistência e contratos de API em contexto backend.",
+      "Plataforma backend desenvolvida em monorepo, com foco em regras de negócio, APIs REST, persistência tipada e uma arquitetura preparada para evolução.",
     challenge:
-      "Manter separação de responsabilidades e previsibilidade nas integrações de domínio.",
+      "Organizar diferentes responsabilidades do sistema sem criar acoplamento excessivo entre domínio, aplicação, infraestrutura e interfaces externas.",
     solution:
-      "Organização por camadas com foco em legibilidade, testabilidade e evolução contínua.",
-    stack: ["Node.js", "TypeScript", "REST APIs", "Clean Architecture"],
+      "Arquitetura baseada em casos de uso, repositories e injeção de dependências, utilizando TypeScript, Fastify, PostgreSQL e Drizzle ORM.",
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "Fastify",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Docker",
+    ],
   },
   {
-    title: "APIs Node.js com arquitetura limpa",
+    title: "Farol",
     summary:
-      "Estrutura voltada a APIs REST com foco em organização interna, validação e manutenção simples.",
+      "Aplicação com fluxo de créditos e pagamentos integrada ao Asaas, com sincronização de saldo e processamento de webhooks.",
     challenge:
-      "Evitar acoplamento desnecessário entre regra de negócio, acesso a dados e camada HTTP.",
+      "Garantir que pagamentos e alterações de saldo permanecessem consistentes mesmo quando a confirmação dependesse de webhooks ou verificações posteriores.",
     solution:
-      "Aplicação de conceitos como use cases, repository pattern e DI para isolar responsabilidades.",
-    stack: ["Fastify", "Express", "SOLID", "Repository Pattern"],
+      "Implementação de fluxo de reconciliação entre frontend e backend, tratamento de webhooks, fallback de confirmação e atualização do saldo em tempo real.",
+    stack: ["JavaScript", "Node.js", "Asaas", "Webhooks", "Socket", "Jest"],
   },
   {
-    title: "Solução com Drizzle ORM",
+    title: "Sistema de estoque e CMV",
     summary:
-      "Base de persistência tipada para fluxos backend que dependem de schema claro e migração controlada.",
+      "Sistema backend para operações de estoque, produtos, fichas técnicas, transformações e cálculo de custos em contexto de restaurantes.",
     challenge:
-      "Garantir consistência entre modelo de dados, consultas e evolução de schema.",
+      "Modelar regras de negócio envolvendo produtos, unidades, transformações, armazenamento, fichas técnicas e histórico sem comprometer a consistência dos dados.",
     solution:
-      "Uso de Drizzle ORM para organizar acesso a dados com tipagem e previsibilidade.",
-    stack: ["Drizzle ORM", "PostgreSQL", "MySQL", "Migrations"],
-  },
-  {
-    title: "Base de testes automatizados",
-    summary:
-      "Estrutura destinada a sustentar automações e cenários de validação com foco em qualidade e confiabilidade.",
-    challenge:
-      "Reduzir regressão sem transformar a suíte em um ponto de acoplamento ao código produtivo.",
-    solution:
-      "Abordagem com Python e Selenium para automatizar verificações e apoiar a evolução do produto.",
-    stack: ["Python", "Selenium", "QA Automation", "Testes"],
+      "Modelagem relacional, repositories, casos de uso e consultas SQL otimizadas para lidar com regras complexas e grandes volumes de dados.",
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Knex",
+      "SQL",
+      "React",
+      "Vite",
+    ],
   },
 ];
 
