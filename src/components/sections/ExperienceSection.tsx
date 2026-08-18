@@ -1,15 +1,19 @@
-import { experienceItems } from "../../config/portfolio";
+import { usePortfolio } from "../../hooks/usePortfolio";
 import { Section } from "../ui/Section";
 import { Timeline } from "../ui/Timeline";
 import { ExperienceCard } from "../ui/ExperienceCard";
+import { useTranslation } from "react-i18next";
 
 export function ExperienceSection() {
+  const { t } = useTranslation();
+  const { experienceItems } = usePortfolio();
+
   return (
     <Section
       id="experience"
-      eyebrow="Experiência"
-      title="Da qualidade ao backend: uma trajetória construída na prática."
-      description="Minha experiência em suporte, desenvolvimento e QA influenciou diretamente a forma como hoje construo e mantenho sistemas backend."
+      eyebrow={t("experience")}
+      title={t("sections.experienceTitle")}
+      description={t("sections.experienceDescription")}
     >
       <Timeline>
         {experienceItems.map((item) => (

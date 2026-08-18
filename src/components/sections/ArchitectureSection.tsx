@@ -1,27 +1,31 @@
-import { architectureTopics } from "../../config/portfolio";
+import { usePortfolio } from "../../hooks/usePortfolio";
 import { Section } from "../ui/Section";
 import { Card } from "../ui/Card";
 import { Chip } from "../ui/Chip";
+import { useTranslation } from "react-i18next";
 
 export function ArchitectureSection() {
+  const { t } = useTranslation();
+  const { architectureTopics } = usePortfolio();
+  const details = "architectureDetails";
+
   return (
     <Section
       id="architecture"
-      eyebrow="Arquitetura"
-      title="Como estruturo sistemas backend"
-      description="Mais do que seguir padrões por convenção, busco separar responsabilidades para manter regras de negócio testáveis, independentes e fáceis de evoluir."
+      eyebrow={t("architecture")}
+      title={t("sections.architectureTitle")}
+      description={t("sections.architectureDescription")}
     >
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <Card className="rounded-3xl p-6 sm:p-8">
           <div className="space-y-6">
             <div>
-              <p className="section-kicker">Fluxo de uma requisição</p>
+              <p className="section-kicker">{t(`${details}.flow`)}</p>
               <h3 className="mt-3 text-2xl font-semibold text-foreground">
-                HTTP → aplicação → domínio → persistência
+                {t(`${details}.flowTitle`)}
               </h3>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                A ideia é evitar que regras de negócio fiquem acopladas ao
-                framework HTTP ou ao banco de dados.
+                {t(`${details}.flowDescription`)}
               </p>
             </div>
 
@@ -29,31 +33,31 @@ export function ArchitectureSection() {
               <ArchitectureStep
                 number="01"
                 title="Controller / Route"
-                description="Recebe a requisição, valida os dados de entrada e encaminha a operação."
+                description={t(`${details}.controllerDescription`)}
               />
 
               <ArchitectureStep
                 number="02"
                 title="Use Case"
-                description="Orquestra a operação e concentra as regras da aplicação."
+                description={t(`${details}.useCaseDescription`)}
               />
 
               <ArchitectureStep
                 number="03"
                 title="Domain"
-                description="Representa as regras e comportamentos que pertencem ao negócio."
+                description={t(`${details}.domainDescription`)}
               />
 
               <ArchitectureStep
                 number="04"
                 title="Repository"
-                description="Abstrai a persistência e evita que a regra de negócio dependa diretamente do banco."
+                description={t(`${details}.repositoryDescription`)}
               />
 
               <ArchitectureStep
                 number="05"
                 title="Infrastructure"
-                description="Implementa detalhes externos como ORM, banco de dados, APIs e outros serviços."
+                description={t(`${details}.infrastructureDescription`)}
               />
             </div>
           </div>
@@ -61,15 +65,14 @@ export function ArchitectureSection() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
           <Card className="rounded-3xl p-6">
-            <p className="section-kicker">Princípios</p>
+            <p className="section-kicker">{t(`${details}.principles`)}</p>
 
             <h3 className="mt-3 text-xl font-semibold text-foreground">
-              O objetivo é reduzir acoplamento
+              {t(`${details}.couplingTitle`)}
             </h3>
 
             <p className="mt-3 text-sm leading-7 text-muted-foreground">
-              Frameworks e ferramentas podem mudar. A regra de negócio não
-              deveria precisar ser reescrita sempre que isso acontece.
+              {t(`${details}.couplingDescription`)}
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
@@ -81,16 +84,14 @@ export function ArchitectureSection() {
           </Card>
 
           <Card className="rounded-3xl p-6">
-            <p className="section-kicker">Na prática</p>
+            <p className="section-kicker">{t(`${details}.practical`)}</p>
 
             <h3 className="mt-3 text-xl font-semibold text-foreground">
-              Arquitetura adaptada ao projeto
+              {t(`${details}.adaptedTitle`)}
             </h3>
 
             <p className="mt-3 text-sm leading-7 text-muted-foreground">
-              Já trabalhei com diferentes combinações de framework e
-              persistência, escolhendo a abordagem de acordo com o contexto da
-              aplicação.
+              {t(`${details}.adaptedDescription`)}
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">

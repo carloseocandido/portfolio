@@ -2,12 +2,15 @@ import type { ProjectItem } from "../../types/portfolio";
 import { Button } from "./Button";
 import { Card } from "./Card";
 import { Chip } from "./Chip";
+import { useTranslation } from "react-i18next";
 
 type ProjectCardProps = {
   project: ProjectItem;
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useTranslation();
+
   return (
     <Card className="flex h-full flex-col rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1">
       <div className="flex items-start justify-between gap-4">
@@ -23,7 +26,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-            Desafio
+            {t("cards.challenge")}
           </p>
           <p className="mt-2 text-sm leading-7 text-foreground/90">
             {project.challenge}
@@ -31,7 +34,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-            Solução
+            {t("cards.solution")}
           </p>
           <p className="mt-2 text-sm leading-7 text-foreground/90">
             {project.solution}

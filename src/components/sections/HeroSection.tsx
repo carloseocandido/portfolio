@@ -1,12 +1,17 @@
-import { siteContent, heroLinks, socialLinks } from "../../config/portfolio";
+import { heroLinks, socialLinks } from "../../config/portfolio";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 import { Card } from "../ui/Card";
 import { Badge } from "../ui/Badge";
 import { AnimatedSection } from "../ui/AnimatedSection";
 import carlosPhoto from "../../assets/ico/carlos.jpeg";
+import { useTranslation } from "react-i18next";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export function HeroSection() {
+  const { t } = useTranslation();
+  const { siteContent } = usePortfolio();
+
   return (
     <section id="top" className="pt-10 sm:pt-14">
       <Container>
@@ -24,17 +29,17 @@ export function HeroSection() {
                 </div>
                 <div className="space-y-1">
                   <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                    profile
+                    {t("profile")}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Backend Developer
+                    {t("backendDeveloper")}
                   </p>
                 </div>
               </div>
 
               <div className="inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
                 <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_18px_rgb(var(--primary)/0.55)]" />
-                Backend Developer · Node.js · TypeScript
+                {siteContent.roles.join(" · ")}
               </div>
 
               <div className="space-y-4">
@@ -44,7 +49,7 @@ export function HeroSection() {
                 <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
                   {siteContent.name}
                   <span className="block text-primary">
-                    Desenvolvedor Backend
+                    {t("backendDeveloper")}
                   </span>
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
@@ -57,14 +62,14 @@ export function HeroSection() {
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href="#projects">Ver projetos</Button>
+                <Button href="#projects">{t("viewProjects")}</Button>
 
                 <Button href={heroLinks.github} variant="secondary" external>
                   GitHub
                 </Button>
 
                 <Button href="#contact" variant="ghost">
-                  Entrar em contato
+                  {t("contact")}
                 </Button>
               </div>
 
@@ -83,11 +88,11 @@ export function HeroSection() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                      engenharia
+                      {t("engineering")}
                     </p>
 
                     <h2 className="mt-2 text-2xl font-semibold text-foreground">
-                      Backend pensado para evoluir
+                      {t("backendBuiltToEvolve")}
                     </h2>
                   </div>
                   <span className="material-symbols-outlined text-3xl text-primary">
@@ -101,18 +106,15 @@ export function HeroSection() {
                       Stack
                     </p>
                     <p className="mt-2 text-sm leading-7 text-foreground/90">
-                      Node.js, TypeScript, Express, Fastify, MySQL e PostgreSQL,
-                      trabalhando com diferentes abordagens de persistência.
+                      {t("heroStackDescription")}
                     </p>
                   </div>
                   <div className="rounded-2xl border border-border/70 bg-background/60 p-4">
                     <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                      Diferencial
+                      {t("differentiator")}
                     </p>
                     <p className="mt-2 text-sm leading-7 text-foreground/90">
-                      Experiência em desenvolvimento e QA, trazendo preocupação
-                      com testabilidade, confiabilidade e qualidade desde a
-                      implementação.
+                      {t("heroDifferentiatorDescription")}
                     </p>
                   </div>
                 </div>

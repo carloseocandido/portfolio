@@ -1,5 +1,6 @@
 import { navigationItems } from "../../config/portfolio";
 import { cn } from "../../utils/cn";
+import { useTranslation } from "react-i18next";
 
 type NavbarLinksProps = {
   className?: string;
@@ -12,6 +13,16 @@ export function NavbarLinks({
   mobile,
   onNavigate,
 }: NavbarLinksProps) {
+  const { t } = useTranslation();
+  const navigationLabels = [
+    t("navigation.about"),
+    t("navigation.stack"),
+    t("navigation.experience"),
+    t("navigation.projects"),
+    t("navigation.architecture"),
+    t("navigation.contact"),
+  ];
+
   return (
     <nav
       className={cn(
@@ -20,7 +31,7 @@ export function NavbarLinks({
         className,
       )}
     >
-      {navigationItems.map((item) => (
+      {navigationItems.map((item, index) => (
         <a
           key={item.label}
           className={cn(
@@ -30,7 +41,7 @@ export function NavbarLinks({
           href={item.href}
           onClick={onNavigate}
         >
-          {item.label}
+          {navigationLabels[index]}
         </a>
       ))}
     </nav>

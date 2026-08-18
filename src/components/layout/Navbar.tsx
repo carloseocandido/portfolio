@@ -3,8 +3,10 @@ import { Container } from "../ui/Container";
 import { HeaderActions } from "../header/HeaderActions";
 import { NavbarLinks } from "../header/NavbarLinks";
 import { cn } from "../../utils/cn";
+import { useTranslation } from "react-i18next";
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -25,7 +27,7 @@ export function Navbar() {
         <a
           href="#top"
           className="group inline-flex items-center gap-3"
-          aria-label="Ir para o início da página"
+          aria-label={t("menu.home")}
         >
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform duration-300 group-hover:-rotate-6">
             C
@@ -35,7 +37,7 @@ export function Navbar() {
               CARLOS
             </span>
             <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-              Backend Developer
+              {t("backendDeveloper")}
             </span>
           </span>
         </a>
@@ -52,7 +54,7 @@ export function Navbar() {
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/70 bg-card/70 text-foreground transition-colors hover:bg-muted/80 lg:hidden"
-            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={isOpen ? t("menu.close") : t("menu.open")}
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsOpen((current) => !current)}
@@ -79,8 +81,8 @@ export function Navbar() {
           />
 
           <div className="mt-4 border-t border-border/60 pt-4">
-            <div className="flex justify-center">
-              <HeaderActions />
+            <div className="flex justify-start">
+              <HeaderActions mobile />
             </div>
           </div>
         </Container>

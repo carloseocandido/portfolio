@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
-import { contactFields, heroLinks, socialLinks } from "../../config/portfolio";
+import { heroLinks, socialLinks } from "../../config/portfolio";
 import { Section } from "../ui/Section";
 import { Card } from "../ui/Card";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
+import { useTranslation } from "react-i18next";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 type FormState = {
   name: string;
@@ -18,30 +20,32 @@ const initialState: FormState = {
 };
 
 export function ContactSection() {
+  const { t } = useTranslation();
+  const { contactFields } = usePortfolio();
   const [formState, setFormState] = useState<FormState>(initialState);
 
   const mailtoHref = useMemo(() => {
     const subject = encodeURIComponent(
-      `Contato via portfólio - ${formState.name || "Novo projeto"}`,
+      `${t("mail.subject")} - ${formState.name || t("mail.newProject")}`,
     );
     const body = encodeURIComponent(
       [
-        `Nome: ${formState.name || "-"}`,
-        `Email: ${formState.email || "-"}`,
+        `${t("mail.name")}: ${formState.name || "-"}`,
+        `${t("mail.email")}: ${formState.email || "-"}`,
         "",
         formState.message || "",
       ].join("\n"),
     );
 
     return `mailto:${socialLinks[2].href.replace("mailto:", "")}?subject=${subject}&body=${body}`;
-  }, [formState.email, formState.message, formState.name]);
+  }, [formState.email, formState.message, formState.name, t]);
 
   return (
     <Section
       id="contact"
-      eyebrow="Contato"
-      title="Contato direto para conversas sobre backend, arquitetura e qualidade."
-      description="Use os canais abaixo para falar sobre oportunidades, projetos ou troca técnica de forma objetiva."
+      eyebrow={t("contactSection")}
+      title={t("sections.contactTitle")}
+      description={t("sections.contactDescription")}
     >
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <Card className="rounded-3xl p-6 sm:p-8">
@@ -79,7 +83,7 @@ export function ContactSection() {
 
             <label htmlFor="message" className="block space-y-2">
               <span className="text-sm font-medium text-foreground">
-                Mensagem
+                {t("cards.message")}
               </span>
               <textarea
                 id="message"
@@ -98,9 +102,9 @@ export function ContactSection() {
             </label>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button type="submit">Enviar mensagem</Button>
+              <Button type="submit">{t("cards.sendMessage")}</Button>
               <Button href={heroLinks.email} variant="secondary" external>
-                Email direto
+                {t("cards.directEmail")}
               </Button>
             </div>
           </form>
@@ -109,9 +113,9 @@ export function ContactSection() {
         <Card className="rounded-3xl p-6 sm:p-8">
           <div className="space-y-5">
             <div>
-              <p className="section-kicker">Canais</p>
+              <p className="section-kicker">{t("cards.channels")}</p>
               <h3 className="mt-3 text-2xl font-semibold text-foreground">
-                GitHub, LinkedIn e e-mail
+                {t("contactDetails.channelsTitle")}
               </h3>
             </div>
 
@@ -128,8 +132,7 @@ export function ContactSection() {
 
             <div className="grid gap-3 rounded-2xl border border-border/80 bg-background/60 p-4">
               <p className="text-sm leading-7 text-muted-foreground">
-                Se a conversa envolver backend, integração, arquitetura ou
-                qualidade de software, você já pode seguir por estes canais:
+                {t("contactDetails.channelsDescription")}
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button href={socialLinks[0].href} variant="ghost" external>
